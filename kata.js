@@ -84,5 +84,13 @@ console.log(basicOp("/", 49, 7)); // Output: 7
 console.log("Challenge #4");
 // Write a program that prints the numbers from 100 to 200 to the console, with three exceptions: - If the number is a multiple of 3, print the String "Loopy". - If the number is a multiple of 4, print the String "Lighthouse". - If the number is a multiple of both 3 and 4, print the String "LoopyLighthouse".
 for (let num = 100; num <= 200; num++) {
+  if (num % 3 === 0 && num % 4 === 0) {
+    console.log("LoopyLighthouse");
+  } else if (num % 3 === 0) {
+    console.log("Loopy");
+  } else if (num % 4 === 0) {
+    console.log("Lighthouse");
+  }
+
   console.log(num);
 }
