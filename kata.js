@@ -54,3 +54,23 @@ console.log(result); // Output: 20
 // ('-', 15, 18) --> -3
 // ('*', 5, 5) --> 25
 // ('/', 49, 7) --> 7
+
+function basicOp(operator, value1, value2) {
+  switch (operator) {
+    case "+":
+      return value1 + value2;
+    case "-":
+      return value1 - value2;
+    case "*":
+      return value1 * value2;
+    case "/":
+      return value1 / value2;
+    default:
+      throw new Error("Invalid operator");
+  }
+}
+console.log(basicOp("+", 4, 7)); // Output: 11
+console.log(basicOp("-", 15, 18)); // Output: -3
+console.log(basicOp("*", 5, 5)); // Output: 25
+console.log(basicOp("/", 49, 7)); // Output: 7
+console.log(basicOp("%", 49, 7)); //Uncaught Error: Invalid operator
