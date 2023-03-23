@@ -1,4 +1,6 @@
 //challenge #1
+console.log("Challenge #1");
+
 //Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
 
 //Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
@@ -23,6 +25,7 @@ if (lovefunc(flower1, flower2)) {
 }
 
 //challenge #2
+console.log("Challenge #2");
 
 //You get an array of numbers, return the sum of all of the positives ones.
 
@@ -43,6 +46,8 @@ let result = positiveSum(numbers);
 console.log(result); // Output: 20
 
 //challenge #3
+console.log("Challenge #3");
+
 // code on javascript:
 // Your task is to create a function that does four basic mathematical operations.
 
@@ -73,4 +78,11 @@ console.log(basicOp("+", 4, 7)); // Output: 11
 console.log(basicOp("-", 15, 18)); // Output: -3
 console.log(basicOp("*", 5, 5)); // Output: 25
 console.log(basicOp("/", 49, 7)); // Output: 7
-console.log(basicOp("%", 49, 7)); //Uncaught Error: Invalid operator
+//console.log(basicOp("%", 49, 7)); //Uncaught Error: Invalid operator
+
+//challenge #4
+console.log("Challenge #4");
+// Write a program that prints the numbers from 100 to 200 to the console, with three exceptions: - If the number is a multiple of 3, print the String "Loopy". - If the number is a multiple of 4, print the String "Lighthouse". - If the number is a multiple of both 3 and 4, print the String "LoopyLighthouse".
+for (let num = 100; num <= 200; num++) {
+  console.log(num);
+}
