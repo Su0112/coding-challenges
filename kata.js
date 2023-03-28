@@ -94,3 +94,33 @@ for (let num = 100; num <= 200; num++) {
 
   console.log(num);
 }
+
+// Make password.js take in a single string as a command line argument and print out an obfuscated version of that password, using the rules defined below.
+//challenge #5
+console.log("Challenge #5");
+// Read the password from the command line argument
+const password = process.argv[2];
+// Define the obfuscate function
+function obfuscate(password) {
+  // Initialize the obfuscated password string
+  let result = "";
+  // Loop through each character in the password
+  for (let i = 0; i < password.length; i++) {
+    //condition
+    if (password[i] == "a") {
+      result += "4";
+    } else if (password[i] == "e") {
+      result += "3";
+    } else if (password[i] == "o") {
+      result += "0";
+    } else if (password[i] == "l") {
+      result += "1";
+    } else {
+      result += password[i]; // Otherwise, append the original character to the obfuscated password
+    }
+  }
+  // Return the obfuscated password
+  return result;
+}
+// Obfuscate the password and print the result to the console
+console.log(obfuscate(password));
