@@ -124,3 +124,25 @@ function obfuscate(password) {
 }
 // Obfuscate the password and print the result to the console
 console.log(obfuscate(password));
+
+//challenge #6
+console.log("Challenge #6");
+
+function isPalindrome(s) {
+  // Removing spaces and converting string to lowercase
+  s = s.toLowerCase().replace(/\s/g, "");
+
+  // Reversing the string
+  let reversed = "";
+
+  for (let i = s.length - 1; i >= 0; i--) {
+    reversed += s[i];
+  }
+
+  // Comparing the original string with the reversed string
+  return s === reversed;
+}
+// Test the isPalindrome function
+console.log(isPalindrome("racecar")); // true
+console.log(isPalindrome("No lemon no melon")); // true
+console.log(isPalindrome("hello world")); // false
