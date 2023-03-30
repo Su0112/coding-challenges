@@ -128,19 +128,19 @@ console.log(obfuscate(password));
 //challenge #6
 console.log("Challenge #6");
 
-function isPalindrome(s) {
+function isPalindrome(w) {
   // Removing spaces and converting string to lowercase
-  s = s.toLowerCase().replace(/\s/g, "");
+  w = w.toLowerCase().replace(/\w/g, "");
 
   // Reversing the string
   let reversed = "";
 
-  for (let i = s.length - 1; i >= 0; i--) {
-    reversed += s[i];
+  for (let i = w.length - 1; i >= 0; i--) {
+    reversed += w[i];
   }
 
   // Comparing the original string with the reversed string
-  return s === reversed;
+  return w === reversed;
 }
 // Test the isPalindrome function
 console.log(isPalindrome("racecar")); // true
