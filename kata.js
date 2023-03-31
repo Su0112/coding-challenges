@@ -146,3 +146,15 @@ function isPalindrome(w) {
 console.log(isPalindrome("racecar")); // true
 console.log(isPalindrome("No lemon no melon")); // true
 console.log(isPalindrome("hello world")); // false
+
+//challenge #7
+console.log("Challenge #7");
+
+function reverseString(string) {
+  reversed = "";
+  for (let i = string.length - 1; i >= 0; i++) {
+    reversed += string[i];
+  }
+  return reversed;
+}
+console.log(reverseString("Hello"));
