@@ -99,6 +99,7 @@ for (let num = 100; num <= 200; num++) {
 //challenge #5
 console.log("Challenge #5");
 // Read the password from the command line argument
+
 const password = process.argv[2];
 // Define the obfuscate function
 function obfuscate(password) {
@@ -158,3 +159,23 @@ function reverseString(string) {
   return reversed;
 }
 console.log(reverseString("Hello"));
+
+//challenge #8
+console.log("Challenge #8");
+/*DESCRIPTION:
+Clock shows h hours, m minutes and s seconds after midnight.
+
+Your task is to write a function which returns the time since midnight in milliseconds. */
+
+function timeSinceMidnight(h, m, s) {
+  // Calculate the total number of milliseconds
+  // for hours, minutes, and seconds
+  let hoursInMilliseconds = h * 60 * 60 * 1000;
+  let minutesInMilliseconds = m * 60 * 1000;
+  let secondsInMilliseconds = s * 1000;
+
+  // Add up the total number of milliseconds
+  let totalMilliseconds = hoursInMilliseconds + minutesInMilliseconds + secondsInMilliseconds;
+
+  return totalMilliseconds;
+}
