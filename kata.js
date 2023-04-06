@@ -179,3 +179,19 @@ function timeSinceMidnight(h, m, s) {
 
   return totalMilliseconds;
 }
+// challenge #9
+console.log("Challenge #9");
+
+function findMaxMin(numbers) {
+  let maxNum = numbers[0];
+  let minNum = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > maxNum) {
+      maxNum = numbers[i];
+    }
+    if (numbers[i] < minNum) {
+      minNum = numbers[i];
+    }
+  }
+  return { max: maxNum, min: minNum };
+}
