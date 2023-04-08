@@ -191,7 +191,28 @@ Examples (Input -> Output)
 Notes
 You may consider that there will not be any empty arrays/vectors. */
 
-function findMaxMin(numbers) {
+
+function min(list) {
+  let minValue = list[0];
+  for (let i = 1; i < list.length; i++) {
+    if (list[i] < minValue) {
+      minValue = list[i];
+    }
+  }
+  return minValue;
+}
+
+function max(list) {
+  let maxValue = list[0];
+  for (let i = 1; i < list.length; i++) {
+    if (list[i] > maxValue) {
+      maxValue = list[i];
+    }
+  }
+  return maxValue;
+}
+
+/*function findMaxMin(numbers) {
   let maxNum = numbers[0];
   let minNum = numbers[0];
   for (let i = 1; i < numbers.length; i++) {
@@ -203,4 +224,5 @@ function findMaxMin(numbers) {
     }
   }
   return { max: maxNum, min: minNum };
-}
+} */
+//Find Maximum and Minimum Values of a List
