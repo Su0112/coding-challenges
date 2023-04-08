@@ -180,6 +180,7 @@ function timeSinceMidnight(h, m, s) {
   return totalMilliseconds;
 }
 // challenge #9
+//Find Maximum and Minimum Values of a List
 console.log("Challenge #9");
 /*Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language ) that receive a list of integers as input, and return the largest and lowest number in that list, respectively.
 
@@ -190,8 +191,22 @@ Examples (Input -> Output)
 * [5]                             -> min = 5, max = 5
 Notes
 You may consider that there will not be any empty arrays/vectors. */
+//Psuedocode
+/*
+min(list)
+  minValue = first element of list
+  for each element in list starting from the second element
+    if current element is less than minValue
+      set minValue to current element
+  return minValue
 
-
+max(list)
+  maxValue = first element of list
+  for each element in list starting from the second element
+    if current element is greater than maxValue
+      set maxValue to current element
+  return maxValue
+ */
 function min(list) {
   let minValue = list[0];
   for (let i = 1; i < list.length; i++) {
@@ -225,4 +240,3 @@ function max(list) {
   }
   return { max: maxNum, min: minNum };
 } */
-//Find Maximum and Minimum Values of a List
