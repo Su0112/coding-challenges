@@ -258,3 +258,37 @@ Examples
 const stringToNumber = function(str) {
   return Number(str);
 }
+
+
+// challenge #11
+console.log("Challenge #11");
+/*An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+Example: (Input --> Output)
+
+"Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+
+isIsogram "Dermatoglyphics" = true
+isIsogram "moose" = false
+isIsogram "aba" = false */
+
+function isIsogram(str) {
+  // Convert string to lowercase to ignore case
+  str = str.toLowerCase();
+
+  // Loop through each character in the string
+  for (let i = 0; i < str.length; i++) {
+    // Check if the current character repeats in the rest of the string
+    if (str.indexOf(str[i], i + 1) !== -1) {
+      return false;
+    }
+  }
+
+  // If no repeating characters found, return true
+  return true;
+}
+
+// Example usage:
+console.log(isIsogram("Dermatoglyphics")); // Output: true
+console.log(isIsogram("aba")); // Output: false
+console.log(isIsogram("moOse")); // Output: false
