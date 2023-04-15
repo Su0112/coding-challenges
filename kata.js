@@ -526,7 +526,3 @@ const minmax = function(list) {
   return [min, max];
 };
 
-// Don't change below:
-
-module.exports = { minmax };
-
