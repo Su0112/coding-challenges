@@ -331,8 +331,85 @@ const tempConverter = function(value, cToF) {
   return +Number(((value - 32) / 1.8).toFixed(1));
 
 };
+//challege 13
+console.log("Challenge #13");
+"use strict";
+
+/* Question 01
+
+Build a function called keyMatcher() which, when passed two objects and a string, will use the string to look up the key-value pair in each object and compare the values. If the two values are explicitly equal to each other, return true, otherwise return false if either the values or not the same, or both objects do not have that key.
+
+Examples:
+
+- keyMatcher({a: 1, b: 2, c: 3}, {here: 3, is: 2, a: 1, silly: 0, example: -1}, 'a') returns true (since the value and type are the exact same)
+- keyMatcher({apple: "red", banana: "yellow", cherry: "red"}, {apple: "green", banana: "brown", cherry: "black"}, "apple") returns false since the values are completely different ("red" vs "green")
+- keyMatcher({a: 1, b: 2, c: 3}, {a: "1", b: "2", c: "3"}, 'c') returns false since the values are different types (3 vs "3")
+- keyMatcher({a: 1, b: 2, c: 3}, {d: 4, e: 5, f: 6}, 'b') returns false since b is not in the second object
+
+*/
+
+const keyMatcher = function(firstObj, secondObj, key) {
+
+  /* IMPLEMENT ME */
+  //If the key is not a non-empty string, return false
+  if (typeof key !== "string" || key === "") {
+    return false;
+  }
+  //Set val1, val2 to the value of firstObj and secondObj with its  keys
+  const val1 = firstObj[key];
+  const val2 = secondObj[key];
+
+  //If any of the values are undefined, then return false
+  if (val1 === undefined || val2 === undefined) {
+    return false;
+  }
+  //If the values are equal, then return true
+  return val1 === val2;
+
+};
 
 
-// Don't change below:
+//challenge #14
+console.log("Challenge #14");
 
-module.exports = { tempConverter };
+"use strict";
+
+/* Question 02
+
+Implement a function called countWhich() which will take in a list of items and a callback, and it will return the number of elements which return a truthy value from the callback function.
+
+If the first argument is not an array, our function should return false instead of a number.
+
+Examples:
+
+- countWhich([1, 2, 3, 4, 5], function(num) { return (num > 4); }) returns 1 (only matches 5)
+- countWhich(["apple", "banana", "cherry"], function(fruit) { return fruit[0] === "a"; }) returns 1 (only matches apple)
+- countWhich([10, 20, 30, 40, 50], function(num) { return num % 7 === 0; }) returns 0 (none of the numbers are divisible by 7)
+- countWhich(["apple", "banana", "cherry"], function(fruit) { return fruit.length > 5; }) returns 2 ("apple" is shorter than 6 characters)
+- countWhich([], function(x) { return x > 10 }) returns 0
+- countWhich("This should fail", function(word) { return true; }) returns false (because the first argument is not an array)
+
+*/
+
+const countWhich = function(list, cb) {
+
+  /* IMPLEMENT ME */
+  //If the first argument is not an array, our function should return false instead of a number.
+  if (!Array.isArray(list)) {
+    return false;
+  }
+
+  //Intializing result to 0
+  let result = 0;
+  //loop through the list
+  for (let i = 0; i < list.length; i++) {
+    //calling the callback function cb on each element
+    if (cb(list[i])) {
+      //Increment if truthy
+      result++;
+    }
+
+  }
+  return result;
+};
+
