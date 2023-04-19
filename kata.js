@@ -526,3 +526,24 @@ const minmax = function(list) {
   return [min, max];
 };
 
+//challege 17
+console.log("Challenge #17");
+function titleCase(text) {
+  let words = text.toLowerCase().split(' ');
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i]) {
+      words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+    }
+  }
+
+  return words.join(' ');
+}
+
+
+console.log(titleCase("this is an example")); // "This Is An Example"
+console.log(titleCase("test")); // "Test"
+console.log(titleCase("i r cool")); // "I R Cool"
+console.log(titleCase("WHAT HAPPENS HERE")); // "What Happens Here"
+console.log(titleCase("")); // ""
+console.log(titleCase("A")); // "A"
