@@ -422,3 +422,16 @@ new Promise(function(resolve, reject) {
 })
   .then(finishLoading)
   .catch(showAlternateImage);
+
+//Here are two ways to handle errors.
+
+//Using a.catch;
+get('example.json')
+  .then(resolveFunc)
+  .catch(rejectFunc);
+
+//Chaining a second.then to handle the error;
+get('example.json')
+  .then(resolveFunc)
+  .then(undefined, rejectFunc);
+//Note: You can’t call both the resolve and the reject function in the same.then;
