@@ -398,3 +398,27 @@ assertArraysEqual([1, 2, 3], [3, 2, 1]);
 assertArraysEqual(["1", "2", "3"], ["1", "2", 3]);
 // should log "🛑🛑🛑 Assertion Failed: [1,2,3] !== [3,2,1]"
 
+//new promise
+new Promise(function(resolve, reject) {
+  const value = doSomething();
+  if (thingWorked) {
+    resolve(value);
+  } else if (somethingWentWrong) {
+    reject();
+  }
+})
+  .then(function(value) {
+    //success
+    return nextThing(value);
+  })
+  .catch(rejectFunction);
+
+new Promise(function(resolve, reject) {
+  let img = document.createElement('img');
+  img.src = src;
+  img.onload = resolve;
+  img.onerror = reject;
+  document.body.appendChild(img);
+})
+  .then(finishLoading)
+  .catch(showAlternateImage);
